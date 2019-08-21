@@ -1,0 +1,30 @@
+var reviewsArray = [
+	{
+        avatar: "img/review-1.jpg",
+        name: "Константин",
+        surname: "Константинопольский",
+        company: "Senior agent “S5 Agency World”",
+        text:"“Увидел объявление о дроне, решился попробовать. Дрон провёл обследование корпуса намного дешевле и быстрее, чем команда дайверов! Дрон Огонь!”"
+    },
+    {
+        avatar: "img/review-2.jpg",
+        name: "Жанна",
+        surname: "Александрийская",
+        company: "Director “Meyersk Sea Group”",
+        text:"“Еее! Боиииии иииииииииииии иииииииииииии иииии иииии ии и и ииииии и и и и и ии  ииииииииииииии и и ииииииииииииииииииии”"
+    },
+    {
+        avatar: "img/review-3.jpg",
+        name: "Андрей",
+        surname: "Чёрный",
+        company: "Director “Meyersk Sea Group”",
+        text:"“ООоооо. Уеннно, как отец блоггера, имя которого я забыл.”"
+    },
+    {
+        avatar: "img/review-4.jpg",
+        name: "Иван",
+        surname: "Гай",
+        company: "Director “Meyersk Sea Group”",
+        text:"“Отзыв от Ивана Гайя”"
+    }
+];

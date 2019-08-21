@@ -1,0 +1,338 @@
+@font-face {
+  font-family: 'medio';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/medio.otf') format('opentype');
+}
+
+* {
+  color:#2D2D2D;
+  font-size: 20px;
+  line-height: 26px;
+  outline: none;
+  font-family: medio;
+}
+
+
+html, body {
+  height: 100%;
+
+}
+
+html { 
+  overflow: auto;
+  margin-left: calc(100vw - 100%); 
+  margin-right: 0;
+}
+
+body {
+  background: #FFFFFF;
+/*  overflow-x: hidden;*/
+  margin:0;
+}
+
+gold-color {
+  color:#E1CCAC;
+}
+
+a {
+  text-decoration: none;
+}
+
+.active {
+  color:#E1CCAC;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1;
+  margin-top: 0;
+}
+
+h3 {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 19px;
+}
+
+p {
+  font-size: 20px;
+  line-height: 130%;
+}
+
+nav, header, section, footer {
+  display:flex;
+  width:100%;
+  justify-content: center;
+}
+
+/* Grid */
+.container {
+  width:100%;
+  max-width:1200px;
+  display:flex;
+}
+
+.row {
+  display:flex;
+  flex-direction: row;
+  width:100%;
+  flex-wrap: wrap;
+}
+
+.col {
+}
+
+.col-1 {
+  width:calc(100%/7);
+}
+
+.col-2 {
+  width:calc(100%/7*2);
+}
+
+.col-4 {
+  width: calc(100%/7*4 - 60px);
+  padding: 30px 30px 0 30px;
+}
+
+
+.col-6 {
+  width:calc(100%/7*6);
+}
+
+/* Navbar */
+nav {
+  background-color: white;
+  height:70px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.navbar-nav {
+  transition: .3s all ease;
+}
+
+.navbar-active {
+  transform: translateY(0) !important;
+}
+
+.mobile-overlay {
+  display: none;
+}
+
+.visible {
+  visibility: visible;
+  opacity:1;
+}
+
+.navbar-brand {
+  text-transform: uppercase;
+  padding-left:15px;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.nav-item {
+  padding: 20px 15px;
+}
+
+.nav-link {
+  font-size: 25px;
+  line-height: 30px;
+}
+
+nav .container {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-burger {
+  display:none;
+}
+
+/* Gallery */
+#gallery-wrapper {
+  margin-top:70px;
+}
+
+/* Aside */
+
+.filters {
+  flex-direction: column;
+  position: fixed;
+  margin: 0;
+  width: calc(100%/7);
+  z-index: 2;
+  background: white;
+}
+
+.filters li {
+  padding: 5px 15px;
+}
+
+.filters a {
+  text-transform: capitalize;
+  color: rgba(45, 45, 45, 0.7);
+  opacity: .7;
+}
+
+.filters a:hover {
+  text-transform: capitalize;
+  color: rgba(45, 45, 45, 0.7);
+  opacity: 1;
+}
+
+.active-filter {
+  color: black !important;
+}
+
+/* Page content */
+.grid-sizer, .grid-item {
+  width:calc(100%/3 - 15px);
+  margin-bottom: 9px;
+  transition: all .3s ease;
+}
+
+.grid-item img {
+  cursor: pointer;
+  opacity:.95;
+}
+
+.grid-item img:hover {
+  opacity:1;
+}
+
+/* Image lightbox*/
+
+#photo-lightbox {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color:rgba(0,0,0,.4);
+  visibility:hidden;
+  opacity:0;
+  transition: .3s all ease;
+  z-index: 3;
+}
+
+#close-lightbox {
+  position: fixed;
+  top:30px;
+  right:30px;
+  visibility:hidden;
+  opacity:0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+#close-lightbox svg:hover {
+  fill:white;
+}
+
+#photo-lightbox img {
+  width: auto;
+  max-height: 90vh;
+}
+
+.visible {
+  opacity:1 !important;
+  visibility: visible !important;
+}
+
+/* Bio page */
+
+.gold-bg {
+  background: #E2D2BA;
+}
+
+#bio-section {
+  margin-top: 70px;  
+}
+
+
+/* Contact page */
+.contact-photo {
+  position: relative;
+  height: fit-content;
+}
+
+#contact-section {
+  margin-top: 70px;  
+}
+
+.contact-list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contact-list p {
+  color: #E1CCAC;
+
+}
+
+input {
+  padding: 10px;
+  width: calc(50% - 24px);
+  background: #fff;
+  border: none;
+  border-bottom: 1px solid #707070;
+  -webkit-box-shadow: inset 0 0 0 50px #fff;
+  -webkit-text-fill-color: #000;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #707070;
+  opacity: 1; /* Firefox */
+}
+
+button {
+  width: 50%;
+  padding: 10px;
+  background-color: #111111;
+  border: none;
+  cursor: pointer;
+  color: white;
+  height: 50px;
+}
+
+button:hover {
+  background-color: #fff;
+  border:1px solid #111;
+  color:#2d2d2d;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom:30px;
+}
+
+textarea {
+  resize: vertical; /* user can resize vertically, but width is fixed */
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #707070;
+}
+
+.form-group:last-child {
+  margin-bottom:0px;
+}
